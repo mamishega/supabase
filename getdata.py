@@ -1,16 +1,18 @@
 import boot
 import urequests
 
-def fetch_data():
+def fetch_data(user_id):
    
-    url = f"{boot.SUPABASE_BASE_URL}"
+    url = f"{boot.BASE_URL}?user_id=eq.{user_id}"
     
     try:
         
         
         # Supabase request headers with API key
         headers = {
-            "apikey": boot.SUPABASE_API_KEY        }
+            "apikey": boot.API_KEY,
+            "Authorization": boot.AUTH_TOKEN
+        }
         response = urequests.get(url, headers=headers)
         data = response.json()
         
@@ -22,7 +24,9 @@ def fetch_data():
 
 
 
-fetch_data()
+
+# Run the functions
+fetch_data(31)
 
 
 

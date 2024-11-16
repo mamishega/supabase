@@ -5,12 +5,12 @@ import boot  # Importing boot.py to access configuration values
 
 def delete_data_from_supabase(user_id):
     # Use the primary key filter with user_id
-    url = f"{boot.SUPABASE_BASE_URL}?user_id=eq.{user_id}"
+    url = f"{boot.BASE_URL}?user_id=eq.{user_id}"
     
     # Headers with the API key and authorization token from boot.py
     headers = {
-        "apikey": boot.SUPABASE_API_KEY,
-        "Authorization": boot.SUPABASE_AUTH_TOKEN,
+        "apikey": boot.API_KEY,
+        "Authorization": boot.AUTH_TOKEN,
         "Prefer": "return=representation"  # Optional: requests Supabase to return the deleted row
     }
     
@@ -31,4 +31,4 @@ def delete_data_from_supabase(user_id):
         print("Failed to delete data from Supabase:", e)
 
 # Run the function with a specific user_id
-delete_data_from_supabase(30)
+delete_data_from_supabase(34)

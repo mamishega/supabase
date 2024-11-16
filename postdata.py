@@ -3,16 +3,16 @@ import urequests
 
 
 def post_to_supabase():
-    url = f"{boot.SUPABASE_BASE_URL}"
+    url = f"{boot.BASE_URL}"
     data = {
-        "firstname": "Ali",
-        "lastname": "Sherif",
-        "age": "38"
+        "firstname": "abc",
+        "lastname": "dff",
+        "age": "36"
     }
     
     headers = {
-        "apikey": boot.SUPABASE_API_KEY,
-        "Authorization": boot.SUPABASE_AUTH_TOKEN
+        "apikey": boot.API_KEY,
+        "Authorization": boot.AUTH_TOKEN
     }
     
     try:
