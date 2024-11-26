@@ -2,8 +2,8 @@
 import network
 import time
 
-ssid = "Aussie Broadband 6922"
-password = "xacskeyafa"
+ssid = ""
+password = ""
 
 #ssid = ''
 #password = ''
